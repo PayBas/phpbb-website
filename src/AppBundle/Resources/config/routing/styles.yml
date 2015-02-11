@@ -26,20 +26,6 @@ phpBBWebsite_Styles_create:
         template: AppBundle:Styles:create.html.twig
     methods:  [GET]
 
-phpBBWebsite_Styles_ssp:
-    path:  /ssp/
-    defaults:
-        _controller: AppBundle:StaticTemplate:staticTemplate
-        template: AppBundle:Styles:ssp.html.twig
-    methods:  [GET]
-
-phpBBWebsite_Styles_ssp_30x:
-    path:  /ssp/3.0/
-    defaults:
-        _controller: AppBundle:StaticTemplate:staticTemplate
-        template: AppBundle:Styles:ssp-30x.html.twig
-    methods:  [GET]
-
 phpBBWebsite_Styles_team_overview:
     path:  /team-overview/
     defaults:
@@ -68,3 +54,44 @@ phpBBWebsite_Styles_demo_not_ready:
         template: AppBundle:Styles:demoNotReady.html.twig
     methods:  [GET]
 
+phpBBWebsite_Styles_rules_and_policies:
+    path:  /rules-and-policies/
+    defaults:
+        _controller: AppBundle:StaticTemplate:staticTemplate
+        template: AppBundle:Styles:rules-policies.html.twig
+    methods:  [GET]
+
+phpBBWebsite_Styles_dev_forum_rules:
+    path:  /rules-and-policies/development-rules/
+    defaults:
+        _controller: AppBundle:StaticTemplate:staticTemplate
+        template: AppBundle:Styles:dev-forum-rules.html.twig
+    methods:  [GET]
+
+phpBBWebsite_Styles_submission_policy_31x:
+    path:  /rules-and-policies/submission-policy/3.1/
+    defaults:
+        _controller: AppBundle:StaticTemplate:staticTemplate
+        template: AppBundle:Styles:submission-policy-31x.html.twig
+    methods:  [GET]
+
+phpBBWebsite_Styles_submission_policy_30x:
+    path:  /rules-and-policies/submission-policy/3.0/
+    defaults:
+        _controller: AppBundle:StaticTemplate:staticTemplate
+        template: AppBundle:Styles:submission-policy-30x.html.twig
+    methods:  [GET]
+
+phpBBWebsite_Styles_ssp_31x_redirect:
+    path:  /ssp/
+    defaults:
+        _controller: FrameworkBundle:Redirect:urlRedirect
+        path: /styles/rules-and-policies/submission-policy/3.1/
+        permanent: true
+
+phpBBWebsite_Styles_ssp_30x_redirect:
+    path:  /ssp/3.0/
+    defaults:
+        _controller: FrameworkBundle:Redirect:urlRedirect
+        path: /styles/rules-and-policies/submission-policy/3.0/
+        permanent: true

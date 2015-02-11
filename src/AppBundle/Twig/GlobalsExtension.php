@@ -323,47 +323,56 @@ class GlobalsExtension extends \Twig_Extension
 	{
 		$styleVars = array(
 			// To be removed
-			'STYLES'						  => '/styles/',
-			'STYLES_DB'					   => '/customise/db/styles-2',
+			'STYLES'							=> '/styles/',
+			'STYLES_DB'							=> '/customise/db/styles-2',
 
 			// Main pages
-			'styles_create'				   => '/styles/create/',
-			'styles_changes'				  => '/styles/changes/',
-			'styles_installing'			   => '/styles/installing/',
-			'styles_ssp'					  => '/styles/ssp/',
-			'styles_ssp_30x'				  => '/styles/ssp/3.0/',
-			'styles_support'				  => '/styles/support/',
-			'styles_team_overview'			=> '/styles/team-overview/',
-			'styles_junior_validators'		=> '/styles/junior-validators/',
-			'styles_demo'					 => '/styles/demo/',
+			'styles_create'						=> '/styles/create/',
+			'styles_changes'					=> '/styles/changes/',
+			'styles_installing'					=> '/styles/installing/',
 
-			// Demo pages (handled by Titania)
-			'styles_demo_31x'				 => '/customise/db/style/prosilver/demo/3.1', // TODO: needs to be up and running
-			'styles_demo_30x'				 => '/customise/db/style/prosilver/demo/3.0',
-
-			// Styles CDB
-			'styles_db_path'				  => '/customise/db/styles-2',
-			'styles_gdk_31x_commercial_fonts' => '/customise/db/style/prosilver_gdk_31x_commercial_fonts/',
-			'styles_gdk_31x_free_fonts'	   => '/customise/db/style/prosilver_gdk_31x_free_fonts/',
-			'styles_gdk_30x_commercial_fonts' => '/customise/db/style/prosilver_gdk_commercial_fonts/',
-			'styles_gdk_30x_free_fonts'	   => '/customise/db/style/prosilver_gdk_free_fonts/',
-			'styles_gdk_20x'				  => '/customise/db/style/phpbb_subsilver_gdk/',
-
-			// Documentation resources
-			'styles_wiki'					 => 'https://wiki.phpbb.com/Category:Styles',
-			'styles_kb'					   => '/support/docs/en/3.1/kb/styles/',
-			'styles_kb_31x'				   => '/support/docs/en/3.1/kb/styles/',
-			'styles_kb_30x'				   => '/support/docs/en/3.0/kb/styles/',
-			'styles_kb_30x_install'		   => '/support/docs/en/3.0/kb/article/how-to-install-styles-on-phpbb3/',
-			'styles_kb_30x_create'			=> '/support/docs/en/3.0/kb/article/how-to-create-a-style-basics/',
-			'styles_docs_31x'				 => '/support/docs/en/3.1/ug/adminguide/customise_styles/',
-			'styles_docs_30x'				 => '/support/docs/en/3.0/ug/adminguide/styles/',
-
-			'styles_team_members'			 => '/community/memberlist.php?mode=group&g=7332',
-			'styles_jv_team_members'		  => '/community/memberlist.php?mode=group&g=228778',
+			// Rules
+			'styles_rules'						=> '/styles/rules-and-policies/',
+			'styles_rules_submit'				=> '/styles/rules-and-policies/#a-submission-policy',
+			'styles_rules_submit_31x'			=> '/styles/rules-and-policies/submission-policy/3.1/',
+			'styles_rules_submit_30x'			=> '/styles/rules-and-policies/submission-policy/3.0/',
+			'styles_rules_dev'					=> '/styles/rules-and-policies/development-rules/',
+			'styles_rules_feedback_31x'			=> '/community/viewforum.php?f=74&p=12931323', // TODO: create topic
+			'styles_rules_feedback_30x'			=> '/community/viewtopic.php?f=74&p=12931323', // TODO: move topic to 3.0 styles?
 
 			// Other
-			'styles_db_my_styles'			 => '/customise/db/author/USERNAME/contributions', // TODO: this dynamic link needs the current username (used on SSP pages)
+			'styles_support'					=> '/styles/support/',
+			'styles_team_overview'				=> '/styles/team-overview/',
+			'styles_junior_validators'			=> '/styles/junior-validators/',
+			'styles_demo'						=> '/styles/demo/',
+
+			// Demo pages (handled by Titania)
+			'styles_demo_31x'					=> '/customise/db/style/prosilver/demo/3.1', // TODO: needs to be up and running
+			'styles_demo_30x'					=> '/customise/db/style/prosilver/demo/3.0',
+
+			// Styles CDB
+			'styles_db_path'					=> '/customise/db/styles-2',
+			'styles_gdk_31x_commercial_fonts'	=> '/customise/db/style/prosilver_gdk_31x_commercial_fonts/',
+			'styles_gdk_31x_free_fonts'			=> '/customise/db/style/prosilver_gdk_31x_free_fonts/',
+			'styles_gdk_30x_commercial_fonts'	=> '/customise/db/style/prosilver_gdk_commercial_fonts/',
+			'styles_gdk_30x_free_fonts'			=> '/customise/db/style/prosilver_gdk_free_fonts/',
+			'styles_gdk_20x'					=> '/customise/db/style/phpbb_subsilver_gdk/',
+
+			// Documentation resources
+			'styles_wiki'						=> 'https://wiki.phpbb.com/Category:Styles',
+			'styles_kb'							=> '/support/docs/en/3.1/kb/styles/',
+			'styles_kb_31x'						=> '/support/docs/en/3.1/kb/styles/',
+			'styles_kb_30x'						=> '/support/docs/en/3.0/kb/styles/',
+			'styles_kb_30x_install'				=> '/support/docs/en/3.0/kb/article/how-to-install-styles-on-phpbb3/',
+			'styles_kb_30x_create'				=> '/support/docs/en/3.0/kb/article/how-to-create-a-style-basics/',
+			'styles_docs_31x'					=> '/support/docs/en/3.1/ug/adminguide/customise_styles/',
+			'styles_docs_30x'					=> '/support/docs/en/3.0/ug/adminguide/styles/',
+
+			'styles_team_members'				=> '/community/memberlist.php?mode=group&g=7332',
+			'styles_jv_team_members'			=> '/community/memberlist.php?mode=group&g=228778',
+
+			// Other
+			'styles_db_my_styles'				=> '/customise/db/author/USERNAME/contributions', // TODO: this dynamic link needs the current username (used on SSP pages)
 		);
 
 		return $styleVars;
@@ -456,10 +465,6 @@ class GlobalsExtension extends \Twig_Extension
 			'FORUM_30X_SUPPORT'	=> '/community/viewforum.php?f=46',
 			'FORUM_PHPBBDISC'		=> '/community/viewforum.php?f=64',
 			'FORUM_SEARCH_EVENTS'	=> '/community/search.php?keywords=%5BEVENT%5D&amp;terms=all&amp;fid%5B%5D=64&amp;sc=1&amp;sf=titleonly&amp;sr=topics&amp;sk=t&amp;sd=d&amp;st=0&amp;ch=300&amp;t=0&amp;submit=Search',
-
-			// Related community topics
-			'styles_ssp_31x_feedback'		 => '/community/viewforum.php?f=481&t=66666', // TODO: create topic
-			'styles_ssp_30x_feedback'		 => '/community/viewtopic.php?f=74&p=12931323', // TODO: move topic to 3.0 styles?
 
 			// Styles Forum
 			'FORUM_STYLES'				=> '/community/viewforum.php?f=77',

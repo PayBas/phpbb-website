@@ -1,0 +1,114 @@
+{% extends ':base:base.html.twig' %}
+
+{% block title %}Style Development Forum Rules{% endblock title %}
+
+{% block phpbb_body_class %}styles{% endblock %}
+
+{% block body %}
+<div id="page-body">
+	<ul class="linklist navlinks">
+		<li><a href="{{ home_path }}">Home</a>
+			<strong>&#8249;</strong> <a href="{{ customise_path }}">Customise phpBB</a>
+			<strong>&#8249;</strong> <a href="{{ styles_path }}">Styles</a>
+			<strong>&#8249;</strong> <a href="{{ styles_rules }}">Rules &amp; Policies</a>
+			<strong>&#8249;</strong> <a href="{{ styles_rules }}">Development Forum Rules</a>
+		</li>
+	</ul>
+
+	<div id="main">
+		<h2 class="imgrep mods">Style Development Forum Rules</h2>
+		<p>The Styles in Development Forums are provided for style authors to develop their styles, from feature requests through the debugging and testing phases.</p>
+		<p>We recommend that style authors submit their styles to the phpBB Styles Database, but the alternative is to simply post your style in the <a href="{{ forum_styles_31x_dev }}">[3.1.x]</a> or <a href="{{ forum_styles_30x_dev }}">[3.0.x]</a> "Styles in Development" forums (depending on the version of phpBB you are developing for). If you wish to do so, please follow the guidelines below.</p>
+
+		<ol id="rules">
+			<li id="support-rules">
+				<h3>Support for Styles in Development</h3>
+				<ol type="a">
+					<li id="style-support"><a name="rule1a"></a>Styles support is offered by the style author(s) only. phpBB.com and the phpBB Teams take no responsibility for supporting styles listed anywhere on phpBB.com or other sites. The only exception is those styles created by and published by the <a href="{{ styles_team_overview }}">Styles Team</a>. <a class="permalink" href="#style-support">#</a></li>
+					<li id="support-topics"><a name="rule1b"></a>If the style was downloaded from this site and was not obtained from the Customisation Database, there will be a support topic dedicated to the style in the respective "Styles in Development" forum. Please ask all questions relating to the style in this topic. <a class="permalink" href="#support-topics">#</a></li>
+					<li id="security"><a name="rule1c"></a>Any security vulnerabilities discovered in style listed on phpBB.com must be reported to the style author. The Styles Team will then take the appropriate steps to remove the style and notify the author. phpBB.com does not take responsibility for vulnerabilities contained within styles and is not responsible for any styles listed outside of phpBB.com. <a class="permalink" href="#security">#</a></li>
+				</ol>
+			</li>
+			<li id="licensing-rules">
+				<h3>Licensing your Style</h3>
+				<ol type="a">
+					<li id="license-info"><a name="rule2a"></a>The phpBB Software is released under the GNU GPL v2 and style authors are encouraged (but not forced) to release their styles under this license as this is the most compatible license for usage of styles for phpBB. <a class="permalink" href="#license-info">#</a></li>
+					<li id="restricted-licenses"><a name="rule2b"></a>Styles that are given a license that restricts redistribution are not allowed to be posted on phpBB.com. <a class="permalink" href="#restricted-licenses">#</a></li>
+					<li id="licensing-requirements"><a name="rule2c"></a>If a style relies on code from the phpBB software, it is required to also be licensed under the GPL v2 as per the GPL. <a class="permalink" href="#licensing-requirements">#</a></li>
+					<li id="proprietary-licenses"><a name="rule2d"></a>Styles cannot contain code from libraries which contain a proprietary license as this license does not grant phpBB or the style author rights to redistribute the code. <a class="permalink" href="#proprietary-licenses">#</a></li>
+				</ol>
+			</li>
+			<li id="prefixing-rules">
+				<h3>Style Prefixes</h3>
+				<ol type="a">
+					<li id="prefixes"><a name="rule3a"></a>All styles listed in the Development forums must have a Topic Prefix. Allowed topic prefixes are: [DEV], [ALPHA], [BETA], [RC], [CDB], and [ABD]. <a class="permalink" href="#prefixes">#</a></li>
+					<li id="dev-prefix"><a name="rule3b"></a><strong>[DEV]</strong> - Style is listed as in Development stage. A screenshot or demo link <em>must</em> be provided. <a class="permalink" href="#dev-prefix">#</a></li>
+					<li id="alpha-prefix"><a name="rule3c"></a><strong>[ALPHA]</strong> - Style is listed as Alpha stage. While a screenshot <em>and</em> demo link must be provided, a download is optional. <a class="permalink" href="#alpha-prefix">#</a></li>
+					<li id="beta-prefix"><a name="rule3d"></a><strong>[BETA]</strong> - Style is listed as Beta stage. A download is <em>required</em> for styles listed in BETA, in addition to a screenshot <em>and</em> demo link. <a class="permalink" href="#beta-prefix">#</a></li>
+					<li id="rc-prefix"><a name="rule3e"></a><strong>[RC]</strong> or <strong>[Release]</strong> - Style is listed as RC (Release Candidate) or Release stage. Feature frozen version. -- Generally the stage just before submission to the Customisation Database, and the stage that is usually listed while the Style is in the validation queue. A download, screenshot and demo link <em>must</em> be provided. <a class="permalink" href="#rc-prefix">#</a></li>
+					<li id="cdb-prefix"><a name="rule3f"></a><strong>[CDB]</strong> - Style is listed as CDB (Customisation Database) stage. The Style has been accepted into the Customisation Database and at this stage, all further support and discussions related to the Style will take place in the CDB and the original development topic will be locked. <a class="permalink" href="#cdb-prefix">#</a></li>
+					<li id="abd-prefix"><a name="rule3g"></a><strong>[ABD]</strong> - A style that is no longer in development and the style author has abandoned is listed with this prefix. The style author may close (lock) the topic him or herself. If the style author wishes to continue development of an abandoned style, he or she should PM a Styles Team member to re-open the topic. <a class="permalink" href="#abd-prefix">#</a></li>
+				</ol>
+			</li>
+			<li id="topicformat-rules">
+				<h3>Starting a Style Development Topic</h3>
+				<ol type="a">
+					<li id="topic-limit"><a name="rule4a"></a>Keep <em>one</em> topic per style. Any updates to the style should be posted in the <em>same</em> topic. Do not create multiple topics for the same style. This also applies to color variations of styles - list each color in the first post of the initial topic. <a class="permalink" href="#topic-limit">#</a></li>
+					<li id="topicformat"><a name="rule4b"></a>Below is the recommended Topic Format for your in-Development Style Topic. However, its usage is optional and may be modified to suit your needs:<br />
+						<br />
+						<dl class="codebox">
+							<dt>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></dt>{# TODO #}
+							<dd><code>&#91;color=purple&#93;&#91;size=120&#93;&#91;b&#93;Style Name:&#91;/b&#93;&#91;/size&#93;&#91;/color&#93; The title of your style<br />&#91;color=purple&#93;&#91;size=120&#93;&#91;b&#93;Author:&#91;/b&#93;&#91;/size&#93;&#91;/color&#93; &#91;url=http://www.phpbb.com/community/memberlist.php?mode=viewprofile&amp;u=xxxxx&#93;&#91;b&#93;Author Username&#91;/b&#93;&#91;/url&#93;<br /><br />&#91;color=purple&#93;&#91;size=120&#93;&#91;b&#93;Style Description:&#91;/b&#93;&#91;/size&#93;&#91;/color&#93; Description of your style<br />&#91;color=purple&#93;&#91;size=120&#93;&#91;b&#93;Style Version:&#91;/b&#93;&#91;/size&#93;&#91;/color&#93; Current version of your style<br /><br />&#91;color=purple&#93;&#91;size=120&#93;&#91;b&#93;Requirements:&#91;/b&#93;&#91;/size&#93;&#91;/color&#93; If the style has any special requirements (such as a parent-style, which is needed for style inheritance), enter those here. ** Optional **<br /><br />&#91;color=purple&#93;&#91;size=120&#93;&#91;b&#93;Features:&#91;/b&#93;&#91;/size&#93;&#91;/color&#93; Feature List. Use the &#91;list&#93;&#91;/list&#93; BBCode for easier readability. ** Optional **<br /><br />&#91;color=purple&#93;&#91;size=120&#93;&#91;b&#93;Screenshots:&#91;/b&#93;&#91;/size&#93;&#91;/color&#93; Screenshots for the style<br /><br />&#91;color=purple&#93;&#91;size=120&#93;&#91;b&#93;Demo URL:&#91;/b&#93;&#91;/size&#93;&#91;/color&#93; URL to the DEMO for the style ** Optional **<br />&#91;color=purple&#93;&#91;size=120&#93;&#91;b&#93;Demo Username:&#91;/b&#93;&#91;/size&#93;&#91;/color&#93; If your demo requires login, enter the username required to view the demo -- see guidelines on style demos<br />&#91;color=purple&#93;&#91;size=120&#93;&#91;b&#93;Demo Password:&#91;/b&#93;&#91;/size&#93;&#91;/color&#93; The password for the above login<br /><br />&#91;color=purple&#93;&#91;size=120&#93;&#91;b&#93;Style Download:&#91;/b&#93;&#91;/size&#93;&#91;/color&#93; Enter the URL of the style to download<br /></code></dd>
+						</dl>
+						<a class="permalink" href="#topicformat">#</a>
+					</li>
+				</ol>
+			</li>
+			<li id="demo-rules">
+				<h3>Style Demos and Screenshots</h3>
+				<ol type="a">
+					<li id="screenshot-requirements"><a name="rule5a"></a>Screenshots may be inserted using the [img] BBCode tag. Screenshots should be no larger than 600x500 pixels, and should be hosted on a reliable and quick server. <a class="permalink" href="#screenshot-requirements">#</a></li>
+					<li id="direct-demos"><a name="rule5b"></a>Links to demos should point directly to the demo forum, not the generic website of the author. <a class="permalink" href="#direct-demos">#</a></li>
+					<li id="public-demos"><a name="rule5c"></a>Registration should not be required to view style demos. <a class="permalink" href="#public-demos">#</a></li>
+				</ol>
+			</li>
+			<li id="downloads-rules">
+				<h3>Style Downloads</h3>
+				<ol type="a">
+					<li id="download-requirement"><a name="rule6a"></a>Styles that are listed as either [BETA], [RC] or [Release] are required to have a download accessible as a link. <a class="permalink" href="#download-requirement">#</a></li>
+					<li id="style-files"><a name="rule6b"></a>Style files may not be posted directly in the topic but must be made available in the form of a download link instead. <a class="permalink" href="#style-files">#</a></li>
+					<li id="download-links"><a name="rule6c"></a>All downloads must be publicly accessible. A direct download link is preferred but a link to a page (or Github repository) where the style can be downloaded is also accepted. In the latter case the page or download link must be in English. Downloads that require registration to access will not be allowed. <a class="permalink" href="#download-links">#</a></li>
+				</ol>
+			</li>
+			<li id="requirements-rules">
+				<h3>Style Development Requirements</h3>
+				<ol type="a">
+					<li id="styles-dev-forum"><a name="rule7a"></a>The Styles in Development forums are not meant as release forums. The purpose of these forums is to be a step in the development process for style authors to receive feedback on their styles so that a more complete style is submitted to the Customisation Database. Styles posted must be posted with the intent of the style author to submit the style to the Customisation Database. <a class="permalink" href="#styles-dev-forum">#</a></li>
+					<li id="styles-dev-forum-locking"><a name="rule7b"></a>If an styles is listed as in Development and the Author does not intend for the style to be submitted to the Customisation Database, or the style cannot meet the requirements for the Customisation Database (including license or packaging), the style topic may be locked. But in many cases, styles are allowed to remain in the Development forums for extended periods of time. <a class="permalink" href="#styles-dev-forum-locking">#</a></li>
+				</ol>
+			</li>
+			<li id="abandoned-rules">
+				<h3>Abandoned Styles Forum</h3>
+				<ol type="a">
+					<li id="abandoned-styles"><a name="rule8a"></a>Styles that have been marked as abandoned mean that they are no longer being supported by the original author of the style. To ensure that the Styles in Development Forums are kept in a clean way and the style is being actively supported by the style author, styles that are marked abandoned will be moved by a Styles Team member to the respective Abandoned Styles forum. <a class="permalink" href="#abandoned-styles">#</a></li>
+					<li id="abandoned-styles-forum"><a name="rule8b"></a>The purpose of the Abandoned Styles forums is to allow users of the phpBB software to be able to pickup where the original style author left off. In other words, to take ownership of the style as is allowed per the GNU GPL. <a class="permalink" href="#abandoned-styles-forum">#</a></li>
+					<li id="abandoned-support"><a name="rule8c"></a>There is no support within the Abandoned Styles forums and posting of topics and/or replies is not permitted. <a class="permalink" href="#abandoned-support">#</a></li>
+					<li id="abandoned-takeover"><a name="rule8d"></a>If there is a style within these forums that you would like to take over, please feel free to start a new topic in the corresponding Styles in Development forum. Also please remember that all copyrights MUST remain intact from the abandoned style when you take over the style per the GNU GPL. You may also contact a member of the Styles Team so that a link to your new topic is added to the abandoned style's topic. <a class="permalink" href="#abandoned-takeover">#</a></li>
+				</ol>
+			</li>
+		</ol>
+	</div>
+
+	<div id="extras">
+		{{ include('AppBundle:Styles:menu.html.twig') }}
+		<div class="mini-panel js-sections js-scroll" style="display: none;"></div>
+	</div>
+</div>
+{% endblock %}
+
+{% block javascriptFooter %}
+	{{ parent() }}
+
+	<!-- JS for Rule Highlighting -->
+	<script type="text/javascript" src="{{ asset('assets/js/rules.js') }}"></script>
+{% endblock %}

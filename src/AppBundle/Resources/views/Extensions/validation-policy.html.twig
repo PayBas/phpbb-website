@@ -77,7 +77,7 @@
 			<li id="php-files">Proper file headers and php DocBlocks should be used.‬‬ <a class="permalink" href="#php-files">#</a></li>
 			<li id="php-braces">Braces <code class="inline">{</code> and <code class="inline">}</code> should be on newlines. <a class="permalink" href="#php-braces">#</a></li>
 			<li id="php-magic-numbers">Contain no ‪magic numbers‬‬. [<a href="https://wiki.phpbb.com/Magic_numbers">wiki</a>] <a class="permalink" href="#php-magic-numbers">#</a></li>
-			<li id="php-inphpbb"><code class="inline">IN_PHPBB</code> checks must be used in all included files, unless they contain only classes or interfaces. For example, function files and language files. [<a href="https://wiki.phpbb.com/IN_PHPBB">wiki</a>] <a class="permalink" href="#rphp-inphpbb">#</a></li>
+			<li id="php-inphpbb"><code class="inline">IN_PHPBB</code> checks must be used in all included files, unless they contain only classes or interfaces. For example, function files and language files. [<a href="https://wiki.phpbb.com/IN_PHPBB">wiki</a>] <a class="permalink" href="#php-inphpbb">#</a></li>
 			<li id="php-request-var">The <code class="inline">$request->variable()</code> function is used instead of <code class="inline">$_POST</code>, <code class="inline">$_GET</code>, or <code class="inline">$_REQUEST</code> to get user input. [<a href="{{ extensions_phpbb_cgs }}#general">wiki</a>] <a class="permalink" href="#php-request-var">#</a></li>
 			<li id="php-integers">Integer variables from <code class="inline">$request->variable()</code> are cast as integers using the form: <code class="inline">$request->variable('var', 0)</code> and not <code class="inline">$request->variable ('var', '0')</code>. <a class="permalink" href="#php-integers">#</a></li>
 			<li id="php-server-var"><code class="inline">$_SERVER</code> variables are properly sanitised (many <code class="inline">$_SERVER</code> indexes can be user manipulated). It is preferred to use <code class="inline">$request->server()</code> instead of <code class="inline">$_SERVER</code>, e.g.: <code class="inline">$request->server('REMOTE_ADDR')</code>, as these will be properly sanitised by the $request method. <a class="permalink" href="#php-server-var">#</a></li>
@@ -225,7 +225,7 @@
 
 	<div id="extras">
 		{{ include('AppBundle:Extensions:menu.html.twig') }}
-		<div class="mini-panel js-sections js-scroll" style="display: none"></div>
+		<div class="mini-panel js-sections js-scroll" style="display: none;"></div>
 	</div>
 </div>
 

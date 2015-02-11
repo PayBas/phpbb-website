@@ -1,8 +1,8 @@
 {% extends ':base:base.html.twig' %}
 
-{% block title %}Styles Submission Policy (3.1.x){% endblock title %}
+{% block title %}Styles Submission Policy (3.0.x){% endblock title %}
 
-{% block phpbb_body_class %}styles ssp{% endblock %}
+{% block phpbb_body_class %}styles{% endblock %}
 
 {% block body %}
 <div id="page-body">
@@ -10,22 +10,23 @@
 		<li><a href="{{ home_path }}">Home</a>
 			<strong>&#8249;</strong> <a href="{{ customise_path }}">Customise phpBB</a>
 			<strong>&#8249;</strong> <a href="{{ styles_path }}">Styles</a>
-			<strong>&#8249;</strong> <a href="{{ styles_ssp }}">Styles Submission Policy</a>
+			<strong>&#8249;</strong> <a href="{{ styles_rules }}">Rules &amp; Policies</a>
+			<strong>&#8249;</strong> <a href="{{ styles_rules_submit_30x }}">Submission Policy (3.0.x)</a>
 		</li>
 	</ul>
 
 	<div id="main">
-		<h2 class="imgrep styles">Styles Submission Policy (3.1.x)</h2>
+		<h2 class="imgrep styles">Styles Submission Policy (3.0.x)</h2>
 		<p>All styles that have been approved can be found in our <a href="{{ styles_db_path }}">Styles Database</a>. Within the database, visitors can filter styles by phpBB version, by author, by color, and more.</p>
 		<p>If you create a style and want to submit it to our database, it will first be automatically sent to the <a href="{{ styles_team_overview }}">Styles Team</a> for review. The Styles Team is responsible for ensuring that your submission follows the guidelines below. If two members of the Styles Team inspect your submission and find no obvious errors, it will be approved for release. Please note the Styles Team has full discretion on what it approves or denies.</p>
 		<p>This process can sometimes take a considerable amount of time, so it's in your best interest to follow all of the guidelines from the start. If your style is denied and then resubmitted, it is placed at the end of the queue.</p>
-		<div class="note-box yellow"><strong>Note:</strong> this Styles Submission Policy page is dedicated to styles for phpBB <strong>3.1.x</strong>! This policy differs from that of other versions. Styles for phpBB 3.0.x should comply with the <a href="{{ styles_ssp_30x }}">Styles Submission Policy for phpBB 3.0.x</a></div>
+		<div class="note-box yellow"><strong>Note:</strong> this Styles Submission Policy page is dedicated to styles for phpBB <strong>3.0.x</strong>! This policy differs from that of other versions. Styles for phpBB 3.1.x should comply with the <a href="{{ styles_rules_submit_31x }}">Styles Submission Policy for phpBB 3.1.x</a></div>
 
 		<hr />
 
 		<h2 class="title" id="a-guidelines">Submission Guidelines</h2>
-		<small><strong>Latest Revision:</strong> 15 September 2014<br />
-			<strong>Feedback:</strong> If you have any suggestions/questions, visit the <a href="{{ styles_ssp_31x_feedback }}">feedback topic</a>.</small>
+		<small><strong>Latest Revision:</strong> 2 July 2009<br />
+			<strong>Feedback:</strong> If you have any suggestions/questions, visit the <a href="{{ styles_rules_feedback_30x }}">feedback topic</a>.</small>
 
 		<h3>For ALL Submissions</h3>
 		<ul class="list-margin">
@@ -35,7 +36,7 @@
 			<li>Submissions must be stand-alone and not require:
 				<ul>
 					<li>Altering phpBB's PHP code in any way.</li>
-					<li>Installation of any Extensions.</li>
+					<li>Installation of any MODifications.</li>
 					<li>Files from other styles or from an external website (i.e. linking to images in another style's directory, or linking to an image on your personal website). The only exception to this is for submissions that do not have their own template set included (these can then reference prosilver's template files).</li>
 				</ul>
 			</li>
@@ -44,7 +45,7 @@
 					<li>The .zip file should not contain additional directories and should extract directly (i.e. "ABCstyle" should extract to <samp>/ABCstyle/</samp>, not <samp>/XYZ/ABCstyle/</samp>). The only exception to this is for board style variants in the package (see <a href="#a-variants">below</a>).</li>
 					<li>The .zip file should not contain any extraneous files (such as <samp>Thumbs.db</samp> files or images not directly related to the style, such as advertisements).
 						<ul>
-							<li>All .psd (Photoshop) files (i.e. logos or buttons) or extra images should be placed in a single directory of your submission named <samp>contrib/</samp> (i.e. <samp>/ABCStyle/contrib/</samp>). Extra .html files (relating to Extensions, for example) are not allowed in your submission.</li>
+							<li>All .psd (Photoshop) files (i.e. logos or buttons) or extra images should be placed in a single directory of your submission named <samp>contrib/</samp> (i.e. <samp>/ABCStyle/contrib/</samp>). Extra .html files (relating to MODs, for example) are not allowed in your submission.</li>
 							<li>Any links to your website, donation requests, general information, etc. should be placed in a single <samp>readme.txt</samp> file inside the <samp>contrib/</samp> directory. Keep in mind that advertisement is not allowed on the readme.txt, if there is any advertisement on your readme.txt the Styles Team are free to remove it.</li>
 						</ul>
 					</li>
@@ -60,67 +61,71 @@
 
 		<h3>For Board Styles</h3>
 		<ul class="list-margin">
-			<li>All submissions need to be compatible with the latest version of phpBB 3.1. See the <a href="{{ styles_changes }}">Style Changes</a> page for more information.</li>
-			<li>Submissions must be compatible with <a href="http://www.microsoft.com/ie/">Internet Explorer 8</a> (and above) and <a href="http://www.mozilla.com/">Firefox</a>.
+			<li>All submissions need to be compatible with the latest version of phpBB 3.0. See the <a href="{{ styles_changes }}">Style Changes</a> pages for more information.</li>
+			<li>Submissions must be compatible with <a href="http://www.microsoft.com/ie/">Internet Explorer 6</a> (and above) and <a href="http://www.mozilla.com/">Firefox</a>.
 				<ul>
-					<li>If there are minor display issues with your style in a specific browser (i.e. Internet Explorer 8), it may still be submitted as long as it does not interfere with any phpBB functionality. Please detail any known display issues with your style upon submission.</li>
+					<li>If there are minor display issues with your style in a specific browser (i.e. Internet Explorer 6), it may still be submitted as long as it does not interfere with any phpBB functionality. Please detail any known display issues with your style upon submission.</li>
 				</ul>
 			</li>
-			<li>Styles should be licensed with <a href="http://www.gnu.org/licenses/gpl-2.0.html">GPL v 2.0</a> so they are compatible with phpBB 3.1's license.</li>
-			<li>In case you style only modifies a small number of templates (compared to the prosilver template files), we strongly recommend you to use <a href="{{ styles_create }}#a-inheritance">Template Inheritance</a>.</li>
 			<li>Files should not have any hard-coded (static) text in them. All text should come from the phpBB language files (to allow for localization).</li>
 			<li>The phpBB copyright in the footer of the board style must be kept completely intact and immediately visible on all pages.
 				<ul>
 					<li>In addition to this, one link to your personal site may also be included as an author credit in the footer if you choose. Please note that the Styles Team has complete discretion on what is acceptable as an author credit link.</li>
 				</ul>
 			</li>
-			<li>phpBB 3.1's styling system is broken into two components (3 if you count style.cfg):
+			<li>phpBB 3.0's styling system is broken into three components:
 				<ol>
 					<li><strong>Templates</strong> (.html and .js files that determine the page structure, layout, and functions).</li>
-					<li><strong>Themes</strong> (.css files that determine color schemes, fonts, images, etc).</li>
-					<li class="no-bullet">Collectively these are referred to as a Board Style. You may submit all components in one package as long as each component is modified from the vanilla phpBB 3.1 version. Do not submit each component individually in this case.</li>
-					<li class="no-bullet">You may instead submit only one of the components in a package if you do not intend to modify the others. For example, you may submit theme assets without also submitting an associated template.</li>
+					<li><strong>Themes</strong> (.css files that determine color schemes, fonts, etc).</li>
+					<li><strong>Imagesets</strong> (.gif, .jpg, or .png image files that are used throughout a style).</li>
+					<li class="no-bullet">Collectively these three are referred to as a Board Style. You may submit all three components in one package as long as each component is modified from the vanilla phpBB 3.0 version. Do not submit each component individually in this case.</li>
+					<li class="no-bullet">You may instead submit only one of the three components in a package if you do not intend to modify the other two. For example, you may submit an imageset without also submitting an associated theme and template.</li>
 				</ol>
 				<ul>
 					<li>Each component has a respective folder and that structure should be kept intact.
 						<ul>
-							<li>For a board style submission, the folders for all components should be included.</li>
+							<li>For a board style submission, the folders for all three components should be included.</li>
 							<li class="no-bullet">The structure for your board style submission should be as follows (using example "ABCstyle"):
 								<pre class="codesnippet">/ABCstyle/
     contrib/ (optional)
+    imageset/
     template/
     theme/
-    style.cfg<br />
+    style.cfg
 (Leave style.cfg named as is; only edit the contents with your style's information. Note that the version number in this file should be the version of YOUR style, not necessarily the phpBB version.)</pre>
 							</li>
 							<li>If submitting only one component, omit the folders of the irrelevant components.</li>
-							<li class="no-bullet">The structure for a submission with just a collection of theme assets should be as follows (using example "ABCstyle"):
+							<li class="no-bullet">The structure for just an imageset submission should be as follows (using example "ABCstyle"):
 								<pre class="codesnippet">/ABCstyle/
     contrib/ (optional)
-    theme/</pre>
+    imageset/</pre>
 							</li>
 						</ul>
 					</li>
 					<li>There should be no other files outside of this structure.</li>
-					<li>There should be no additional files that are outside of a vanilla phpBB 3.1 installation (with the exception of those in the optional <samp>contrib/</samp> folder, or any <span  class="underline">relevant</span> additional .html template files). Likewise, there should be no files or images missing.</li>
+					<li>There should be no additional files that are outside of a vanilla phpBB 3.0 installation (with the exception of those in the optional <samp>contrib/</samp> folder, or any <span  class="underline">relevant</span> additional .html template files). Likewise, there should be no files or images missing.</li>
 				</ul>
 			</li>
-			<li id="a-variants">No separate clone submissions (variants of a style, such as color or slight design variants) are allowed for phpBB 3.1. The Template/Theme/ structure allows you to include several variations (i.e. different themes to achieve different color schemes) all in one package.
+			<li id="a-variants">No separate clone submissions (variants of a style, such as color or slight design variants) are allowed for phpBB 3.0. The Template/Theme/Imageset structure allows you to include several variations (i.e. different themes to achieve different color schemes) all in one package.
 				<ul>
 					<li>Example scenario (using example "ABCStyle"):
 						<pre class="codesnippet">/ABCStyle/
     contrib/ (optional)
+    imageset/
     template/
     theme/
     style.cfg
 
 /ABCStyleBlue/
+    imageset/
     theme/
 
 /ABCStyleGreen/
+    imageset/
     theme/
 
 /ABCStyleRed/
+    imageset/
     theme/</pre>
 					</li>
 					<li>Once the user installs the primary style ("ABCStyle" in this example), the supplemental variations ("ABCStyleBlue", "ABCStyleGreen", etc) can be selected in the Administration Control Panel.</li>
@@ -148,11 +153,11 @@
 					<li><strong>Allow the phpBB Styles Team to fix small errors in your Style?</strong> If you uncheck this box, any errors we find will lead to denial of your submission. Otherwise, we will do our best to fix minor errors we notice during the validation process.</li>
 					<li><strong>Component:</strong> Select the appropriate classification for your submission.
 						<ul>
-							<li><strong>Board Style </strong>-- For board styles (with their own templates and theme assets included in the package)</li>
+							<li><strong>Board Style </strong>-- For board styles (where template, theme, and imageset are all included in the package)</li>
 							<li><strong>Smilies </strong>-- For packages containing only smilies.</li>
 							<li><strong>Ranks </strong>-- For packages containing only rank images.</li>
 							<li><strong>Avatars </strong>-- For packages containing only avatars.</li>
-							<li><strong>Imageset </strong>-- For packages containing only imagesets. (not applicable for 3.1 Styles)</li>
+							<li><strong>Imageset </strong>-- For packages containing only imagesets.</li>
 							<li><strong>Theme </strong>-- For packages containing only theme files.</li>
 							<li><strong>Template </strong>-- For packages containing only template files.</li>
 							<li><strong>Topic icons </strong>-- For packages containing only topic icons.</li>
@@ -197,7 +202,7 @@
 
 	<div id="extras">
 		{{ include('AppBundle:Styles:menu.html.twig') }}
-		<div class="mini-panel js-sections js-scroll" style="display: none"></div>
+		<div class="mini-panel js-sections js-scroll" style="display: none;"></div>
 	</div>
 </div>
 {% endblock %}

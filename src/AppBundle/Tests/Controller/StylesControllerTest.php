@@ -116,32 +116,51 @@ class StylesControllerTest extends BootstrapTestSuite
 		$this->globalTests();
 	}
 
-	public function testStylesSSP()
+	public function testStylesRulesPolicies()
 	{
-		$objs	= $this->setupTest('/styles/ssp/');
+		$objs	= $this->setupTest('/styles/rules-and-policies/');
 		$crawler = $objs['crawler'];
 
 		// Title Check
-		$this->assertTrue(strpos(($crawler->filter('title')->first()->text()), 'Styles Submission Policy (3.1.x)') !== false, 'Title contains Styles Submission Policy (3.1.x)');
+		$expectedTitle = array('Styles Rules', 'Policies');
+
+		$this->assertTrue(strpos(($crawler->filter('title')->first()->text()), $expectedTitle[0]) !== false, 'Title contains Styles Rules');
+		$this->assertTrue(strpos(($crawler->filter('title')->first()->text()), $expectedTitle[1]) !== false, 'Title contains Policies');
 
 		// Content Check
-		$this->assertTrue($crawler->filter('html:contains("this Styles Submission Policy page is dedicated to styles for phpBB 3.1.x")')->count() > 0, 'SSP 3.1.x Content Check');
+		$this->assertTrue($crawler->filter('html:contains("phpBB.com Styles Rules, Policies and Guidelines")')->count() > 0, 'Styles Rules and Policies Content Check');
 		$this->assertTrue($crawler->filter('html:contains("3.1.x Styles Forums")')->count() > 0, 'Styles Sidebar Check');
 
 		// Standard All Page Checks
 		$this->globalTests();
 	}
 
-	public function testStylesSSP30x()
+	public function testStylesSubmissionPolicy31x()
 	{
-		$objs	= $this->setupTest('/styles/ssp/3.0/');
+		$objs	= $this->setupTest('/styles/rules-and-policies/submission-policy/3.1/');
+		$crawler = $objs['crawler'];
+
+		// Title Check
+		$this->assertTrue(strpos(($crawler->filter('title')->first()->text()), 'Styles Submission Policy (3.1.x)') !== false, 'Title contains Styles Submission Policy (3.1.x)');
+
+		// Content Check
+		$this->assertTrue($crawler->filter('html:contains("this Styles Submission Policy page is dedicated to styles for phpBB 3.1.x")')->count() > 0, 'Submission Policy 3.1.x Content Check');
+		$this->assertTrue($crawler->filter('html:contains("3.1.x Styles Forums")')->count() > 0, 'Styles Sidebar Check');
+
+		// Standard All Page Checks
+		$this->globalTests();
+	}
+
+	public function testStylesSubmissionPolicy30x()
+	{
+		$objs	= $this->setupTest('/styles/rules-and-policies/submission-policy/3.0/');
 		$crawler = $objs['crawler'];
 
 		// Title Check
 		$this->assertTrue(strpos(($crawler->filter('title')->first()->text()), 'Styles Submission Policy (3.0.x)') !== false, 'Title contains Styles Submission Policy (3.0.x)');
 
 		// Content Check
-		$this->assertTrue($crawler->filter('html:contains("this Styles Submission Policy page is dedicated to styles for phpBB 3.0.x")')->count() > 0, 'SSP 3.0.x Content Check');
+		$this->assertTrue($crawler->filter('html:contains("this Styles Submission Policy page is dedicated to styles for phpBB 3.0.x")')->count() > 0, 'Submission Policy 3.0.x Content Check');
 		$this->assertTrue($crawler->filter('html:contains("3.1.x Styles Forums")')->count() > 0, 'Styles Sidebar Check');
 
 		// Standard All Page Checks
