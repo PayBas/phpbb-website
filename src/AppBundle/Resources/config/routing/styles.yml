@@ -95,3 +95,12 @@ phpBBWebsite_Styles_ssp_30x_redirect:
         _controller: FrameworkBundle:Redirect:urlRedirect
         path: /styles/rules-and-policies/submission-policy/3.0/
         permanent: true
+
+phpBBWebsite_Styles_contribute_redirect:
+    path:  /contribute/{page}
+    defaults:
+        _controller: FrameworkBundle:Redirect:urlRedirect
+        path: /styles/junior-validators/
+        permanent: true
+    requirements:
+        page: .+
